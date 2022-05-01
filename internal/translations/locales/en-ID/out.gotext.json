@@ -1,0 +1,48 @@
+{
+    "language": "en-ID",
+    "messages": [
+        {
+            "id": "hello {John}",
+            "message": "hello {John}",
+            "translation": "(en-ID) hello {John}",
+            "placeholders": [
+                {
+                    "id": "John",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "\"John\""
+                }
+            ]
+        },
+        {
+            "id": "There are {BooksCount} books",
+            "message": "There are {BooksCount} books",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "BooksCount",
+                    "cases": {
+                        "=1": {
+                            "msg": "(en-GB) There is 1 book"
+                        },
+                        "other": {
+                            "msg": "(en-GB) There are {BooksCount} books available"
+                        }
+                    }
+                }
+            },
+            "placeholders": [
+                {
+                    "id": "BooksCount",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "booksCount"
+                }
+            ]
+        }
+    ]
+}
